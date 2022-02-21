@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Estonia&family=Festive&family=Shalimar&family=ZCOOL+XiaoWei&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+button,
+.button {
+  height: 20px;
+  width: auto;
+  padding: 10px;
+  padding-bottom: 25px;
+}
+.button {
+  border-radius: 7px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+body {
+  position: relative;
+}
+.container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: -1;
+}
+.flex {
+  display: flex;
+  gap: 20px;
+}
+.questionContainer {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(122, 21, 21, 0.5);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 450px;
+  flex-direction: column;
+ 
+}
+.questionBox{
+   border:2px solid white;
+   padding:20px;
+   height:50vh;
+   width:30vw
+}
+.answerButton {
+  display:flex;
+  flex-direction: column;
+}
+.padding{
+    padding-bottom:25% ;
+}
+.paddingTop{
+  Padding-top:20px;
+  justify-content: center;
+}
+.selectedButton{
+  background-color: rgb(128, 123, 114);
+}
+.right{
+  background-color: rgb(55, 167, 55);
+}
+.wrong{
+  background-color: rgb(201, 52, 52);
+}
