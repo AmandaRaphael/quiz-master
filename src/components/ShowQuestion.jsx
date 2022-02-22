@@ -1,21 +1,29 @@
 import questionsArray from "../data/questions";
-import { useContext } from "react";
+import { useContext,useState } from "react";
 import MyContext from '../context/MyContext';
 import ShowChoices from './answerButtons/ShowChoices';
-const ShowQuestion = () => {
+
+const ShowQuestion = ({selected,setSelected}) => {
     const{nextQuestion}=useContext(MyContext)
-    const randomQuestionsArray = questionsArray.sort(() => 0.5 - Math.random());
-  console.log(`randomArray`,randomQuestionsArray)  
+  const randomQuestionsArray = questionsArray.sort(() => 0.5 - Math.random());
+
+  console.log(`randomArray`, randomQuestionsArray)
+ 
   return (
-      <div>
-        <p className="padding">
-          {randomQuestionsArray[nextQuestion - 1].question}
-          {nextQuestion}
+    <div>
+      <p className="padding">
+        {randomQuestionsArray[nextQuestion - 1].question}
+        {nextQuestion}
       </p>
-      <div className="answerButton">< ShowChoices question={randomQuestionsArray}/></div>
-        
+      <div className="answerButton">
+        <ShowChoices
+          question={randomQuestionsArray}
+          selected={selected}
+          setSelected={setSelected}
+        />
       </div>
-    );
+    </div>
+  );
 }
 
 export default ShowQuestion

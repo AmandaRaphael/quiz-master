@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MyContext from "./MyContext";
 const MyProvider = ({ children }) => {
-  const [selected, setSelected] = useState(false);
+  
   const [nextQuestion, setNextQuestion] = useState(1);
   const [buttonClass, setButtonClass] = useState("button");
   const [showQ, setQShow] = useState(false);
@@ -50,8 +50,6 @@ const MyProvider = ({ children }) => {
         setNextQuestion,
         buttonClass,
         setButtonClass,
-        selected,
-        setSelected,
         showQ,
         setQShow,
       }}
